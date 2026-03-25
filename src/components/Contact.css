@@ -119,19 +119,57 @@
   .contact-form {
     padding: 2rem;
   }
+
+  .contact-text h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 70px 5%;
+  }
+
+  .contact-text h3 {
+    font-size: 1.6rem;
+  }
+
+  .contact-text p {
+    font-size: 1rem;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .contact-form {
+    padding: 1.8rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.9rem 1.2rem;
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 480px) {
   .contact {
-    padding: 60px 5%;
+    padding: 60px 4%;
   }
 
   .contact-text h3 {
     font-size: 1.5rem;
   }
 
+  .contact-text p {
+    font-size: 0.95rem;
+  }
+
   .social-links {
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
   }
 
   .social-link {
@@ -141,5 +179,20 @@
 
   .contact-form {
     padding: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-submit {
+    padding: 0.9rem;
+    font-size: 0.95rem;
   }
 }
