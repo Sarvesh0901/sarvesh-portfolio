@@ -9,6 +9,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.5rem 4%;
+  }
+}
+
 .hero::before {
   content: '';
   position: absolute;
@@ -180,6 +186,10 @@
     gap: 3rem;
   }
 
+  .greeting {
+    font-size: 1.3rem;
+  }
+
   .name {
     font-size: 3rem;
   }
@@ -189,6 +199,7 @@
   }
 
   .description {
+    font-size: 1rem;
     margin: 0 auto 2rem;
   }
 
@@ -202,17 +213,60 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .name {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .image-placeholder {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .greeting {
+    font-size: 1.1rem;
+  }
+
+  .name {
+    font-size: 2.2rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
   }
 
   .hero-buttons {
     flex-direction: column;
+    width: 100%;
   }
 
   .btn {
     width: 100%;
     text-align: center;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .image-placeholder {
+    width: 200px;
+    height: 200px;
+  }
+
+  .scroll-indicator {
+    bottom: 1rem;
+  }
+
+  .scroll-arrow {
+    width: 25px;
+    height: 40px;
   }
 }

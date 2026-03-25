@@ -29,6 +29,7 @@
   color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
 .navbar.scrolled .logo {
@@ -47,6 +48,7 @@
   font-size: 1rem;
   transition: all 0.3s ease;
   position: relative;
+  white-space: nowrap;
 }
 
 .navbar.scrolled .nav-links a {
@@ -88,27 +90,30 @@
 @media (max-width: 768px) {
   .mobile-menu-btn {
     display: block;
+    z-index: 1001;
   }
 
   .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
+    position: fixed;
+    top: 0;
     right: 0;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
     flex-direction: column;
-    padding: 2rem;
+    padding: 5rem 2rem 2rem;
     gap: 1.5rem;
-    transform: translateY(-100%);
+    transform: translateX(100%);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.active {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
     visibility: visible;
   }
@@ -124,5 +129,27 @@
 
   .navbar.scrolled .logo {
     color: #667eea !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem 4%;
+  }
+
+  .navbar.scrolled {
+    padding: 0.75rem 4%;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    width: 80%;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
   }
 }
