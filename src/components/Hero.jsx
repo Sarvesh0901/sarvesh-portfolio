@@ -17,7 +17,7 @@ const Hero = () => {
             I build exceptional digital experiences that combine elegant code 
             with stunning design.
           </p>
-          
+
           <div className="hero-buttons">
             <a href="#contact" className="btn btn-primary">
               Get In Touch
@@ -34,8 +34,12 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="hero-image"
         >
-          <div className="image-placeholder">
-            <span>Add Your Photo</span>
+          <div className="image-wrapper">
+            <img
+              src="/profileImage.jpeg"
+              alt="Sarvesh"
+              className="profile-img"
+            />
           </div>
         </motion.div>
       </div>
@@ -43,7 +47,7 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.5 }}
+        transition={{ delay: 1.2, duration: 0.5 }}
         className="scroll-indicator"
       >
         <span>Scroll Down</span>

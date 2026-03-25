@@ -5,15 +5,15 @@ import './About.css';
 
 const About = () => {
   const skills = [
-    { name: 'Next.js', icon: SiNextdotjs, color: '#000000' },
+    { name: 'Next.js', icon: SiNextdotjs, color: '#a78bfa' },
     { name: 'React', icon: FaReact, color: '#61DAFB' },
-    { name: 'Node.js', icon: FaNodeJs, color: '#339933' },
-    { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
-    { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
-    { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
-    { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
-    { name: 'Database', icon: FaDatabase, color: '#FFD700' },
-    { name: 'Git', icon: FaGitAlt, color: '#F05032' },
+    { name: 'Node.js', icon: FaNodeJs, color: '#86efac' },
+    { name: 'TypeScript', icon: SiTypescript, color: '#60a5fa' },
+    { name: 'JavaScript', icon: SiJavascript, color: '#fde68a' },
+    { name: 'MongoDB', icon: SiMongodb, color: '#6ee7b7' },
+    { name: 'PostgreSQL', icon: SiPostgresql, color: '#93c5fd' },
+    { name: 'Database', icon: FaDatabase, color: '#fcd34d' },
+    { name: 'Git', icon: FaGitAlt, color: '#fca5a5' },
   ];
 
   return (
@@ -71,12 +71,12 @@ const About = () => {
                   initial={{ opacity: 0, scale: 0.5 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  transition={{ duration: 0.3, delay: index * 0.07 }}
                   className="skill-card"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  whileHover={{ scale: 1.08, y: -4 }}
                 >
                   <skill.icon 
-                    size={40} 
+                    size={38} 
                     style={{ color: skill.color }}
                   />
                   <span>{skill.name}</span>

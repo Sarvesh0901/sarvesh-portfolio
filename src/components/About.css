@@ -1,68 +1,57 @@
 .about {
-  padding: 100px 5%;
-  background: #f8f9fa;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-title {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 4rem;
-  color: #333;
+  padding: var(--section-padding);
+  background: var(--clr-bg-2);
   position: relative;
+  overflow: hidden;
 }
 
-.section-title::after {
+
+.about::before {
   content: '';
   position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 2px;
+  top: -40%;
+  right: -10%;
+  width: 50%;
+  height: 80%;
+  background: radial-gradient(ellipse, rgba(124, 58, 237, 0.07) 0%, transparent 70%);
+  pointer-events: none;
 }
 
+
+
+/* Layout */
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: clamp(2rem, 4vw, 4rem);
   align-items: flex-start;
 }
 
+/* Text Block */
 .about-text {
-  max-width: 500px;
+  max-width: 520px;
 }
 
-.about-text h3 {
-  font-size: 1.8rem;
-  color: #667eea;
-  margin-bottom: 1.5rem;
-  text-align: left;
-}
-
-.about-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 1.5rem;
-}
-
+.about-text h3,
 .skills-section h3 {
-  font-size: 1.8rem;
-  color: #667eea;
-  margin-bottom: 2rem;
+  font-size: clamp(1.1rem, 2.2vw, 1.55rem);
+  color: var(--clr-primary-light);
+  margin-bottom: 1.4rem;
+  font-weight: 700;
   text-align: center;
 }
 
+
+.about-text p {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  line-height: 1.85;
+  color: var(--clr-text-muted);
+  margin-bottom: 1.25rem;
+}
+
+/* Skills */
 .skills-section {
   width: 100%;
-  padding-top: 1rem;
 }
 
 .skills-grid {
@@ -73,96 +62,79 @@
 }
 
 .skill-card {
-  background: #ffffff;
-  padding: 1.2rem 0.8rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  padding: 1.3rem 1rem;
+  border-radius: var(--radius-md);
+  backdrop-filter: var(--glass-blur);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
-  transition: all 0.3s ease;
+  gap: 0.65rem;
+  transition: var(--transition);
   cursor: pointer;
-  min-width: 90px;
+  width: 100%;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card:hover {
+  background: rgba(124, 58, 237, 0.12);
+  border-color: rgba(124, 58, 237, 0.4);
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.2);
 }
 
 .skill-card span {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  color: #333;
+  color: var(--clr-text-muted);
   text-align: center;
+  letter-spacing: 0.02em;
 }
 
+/* -------------------- TABLET -------------------- */
 @media (max-width: 968px) {
   .about-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
 
-  .section-title {
-    font-size: 2.5rem;
-  }
-  
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.8rem;
-  }
-  
   .about-text {
     max-width: 100%;
+    text-align: center;
   }
 
   .about-text h3 {
     text-align: center;
   }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-  .about {
-    padding: 80px 5%;
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
   }
 
-  .section-title {
-    font-size: 2.2rem;
+  .skill-card {
+    padding: 1.1rem 0.75rem;
   }
+}
 
-  .about-text h3 {
-    font-size: 1.6rem;
-  }
-
-  .about-text p {
-    font-size: 1rem;
-  }
-
-  .skills-section h3 {
-    font-size: 1.6rem;
+/* -------------------- MOBILE -------------------- */
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
   }
 
   .skill-card {
     padding: 1rem 0.6rem;
   }
-}
 
-@media (max-width: 480px) {
-  .about {
-    padding: 60px 4%;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
-  }
-
-  .skill-card {
-    padding: 0.9rem 0.4rem;
-    min-width: 60px;
-  }
-  
   .skill-card span {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
 }

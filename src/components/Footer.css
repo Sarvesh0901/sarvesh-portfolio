@@ -1,51 +1,70 @@
 .footer {
-  background: #1a1a2e;
-  color: #ffffff;
   padding: 4rem 5% 2rem;
+  background: var(--clr-bg);
+  border-top: 1px solid var(--clr-border);
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--clr-gradient);
+  opacity: 0.5;
 }
 
 .footer-content {
+  max-width: var(--container-max);
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
-  max-width: 1200px;
-  margin: 0 auto 3rem;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 4rem;
+  margin-bottom: 3rem;
 }
 
 .footer-section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #667eea;
+  color: var(--clr-text-heading);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
-.footer-section h4 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #f0f0f0;
+.footer-brand .logo {
+  font-size: 1.75rem;
+  font-weight: 800;
+  background: var(--clr-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.25rem;
+  display: inline-block;
 }
 
-.footer-section p {
-  line-height: 1.8;
-  color: #b0b0b0;
+.footer-brand p {
+  color: var(--clr-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
-.footer-section ul {
+.footer-links {
   list-style: none;
-  padding: 0;
 }
 
-.footer-section ul li {
+.footer-links li {
   margin-bottom: 0.75rem;
 }
 
-.footer-section ul li a {
-  color: #b0b0b0;
-  text-decoration: none;
-  transition: all 0.3s ease;
+.footer-links a {
+  color: var(--clr-text-muted);
+  transition: var(--transition);
+  font-size: 0.95rem;
 }
 
-.footer-section ul li a:hover {
-  color: #667eea;
+.footer-links a:hover {
+  color: var(--clr-primary-light);
   padding-left: 5px;
 }
 
@@ -54,61 +73,70 @@
   gap: 1rem;
 }
 
-.footer-social a {
+.social-icon {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--clr-bg-glass);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  transition: all 0.3s ease;
+  color: var(--clr-text-muted);
+  transition: var(--transition);
+  border: 1px solid var(--clr-border);
 }
 
-.footer-social a:hover {
-  background: #667eea;
+.social-icon:hover {
+  background: var(--clr-primary);
+  color: #fff;
+  border-color: transparent;
   transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(124, 58, 237, 0.3);
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: var(--container-max);
+  margin: 0 auto;
   padding-top: 2rem;
+  border-top: 1px solid var(--clr-border);
   text-align: center;
 }
 
 .footer-bottom p {
-  color: #b0b0b0;
+  color: var(--clr-text-muted);
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
+  /* Ensure it wraps on small screens */
 }
 
-.heart-icon {
-  color: #EA4335;
-  animation: heartbeat 1.5s ease-in-out infinite;
+.heart {
+  color: #ef4444;
+  animation: heartBeat 1.5s ease-in-out infinite;
 }
 
-@keyframes heartbeat {
-  0%, 100% {
+@keyframes heartBeat {
+  0% {
     transform: scale(1);
   }
-  10%, 30% {
+
+  50% {
     transform: scale(1.2);
   }
-  20%, 40% {
+
+  100% {
     transform: scale(1);
   }
 }
 
-@media (max-width: 768px) {
-  .footer {
-    padding: 3rem 5% 1.5rem;
-  }
-
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 968px) {
   .footer-content {
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
   }
 
   .footer-section h3 {
@@ -152,5 +180,29 @@
 
   .footer-bottom p {
     font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-bottom p {
+    font-size: 0.85rem;
+    flex-direction: row;
+    /* Keep it on one row if possible, or wrap naturally */
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 1.4;
+    max-width: 280px;
+    /* Constrain width to force a neat 2-line wrap if needed */
+    margin: 0 auto;
   }
 }
