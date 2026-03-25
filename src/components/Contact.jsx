@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaDribbble } from 'react-icons/fa';
+import { FaGithub, FaDribbble, FaEnvelope } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -8,7 +8,7 @@ const Contact = () => {
       name: 'GitHub',
       icon: FaGithub,
       url: 'https://github.com/sarvesh843910',
-      color: '#333',
+      color: '#6e6e80',
     },
     {
       name: 'Dribbble',
@@ -27,31 +27,34 @@ const Contact = () => {
   return (
     <section className="contact" id="contact">
       <div className="container">
+        {/* Title sits as a normal block element above the grid */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.5 }}
           className="section-title"
         >
           Get In Touch
         </motion.h2>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="contact-content"
-        >
-          <div className="contact-text">
+
+        {/* Two-column grid: info left, form right */}
+        <div className="contact-grid">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="contact-text"
+          >
             <h3>Let's work together</h3>
             <p>
               I'm always open to discussing new projects, creative ideas, or 
               opportunities to be part of your visions. Whether you have a 
               question or just want to say hi, feel free to reach out!
             </p>
-            
+
             <div className="social-links">
               {socialLinks.map((link, index) => (
                 <motion.a
@@ -61,23 +64,22 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   initial={{ opacity: 0, scale: 0.5 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  viewport={{ once: true, margin: '-80px' }}
+                  transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
                   className="social-link"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
                   style={{ '--hover-color': link.color }}
                 >
-                  <link.icon size={28} />
+                  <link.icon size={22} />
                 </motion.a>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           <motion.form
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="contact-form"
           >
             <div className="form-group">
@@ -96,7 +98,7 @@ const Contact = () => {
               Send Message
             </button>
           </motion.form>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

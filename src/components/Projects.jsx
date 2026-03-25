@@ -5,29 +5,30 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
-      title: 'Project 1',
-      description: 'A brief description of your amazing project. Describe what it does and the technologies used.',
+      title: 'Modern E-commerce',
+      description: 'A fully responsive e-commerce platform with real-time cart updates and secure checkout integration.',
       tags: ['React', 'Node.js', 'MongoDB'],
       github: '#',
       live: '#',
-      image: 'https://via.placeholder.com/400x250/667eea/ffffff?text=Project+1',
+      image: '/project1.jpeg',
     },
     {
-      title: 'Project 2',
-      description: 'Another impressive project showcasing your skills. Highlight key features and technologies.',
+      title: 'Social Media Dashboard',
+      description: 'An interactive dashboard for tracking social media metrics with dynamic data visualization.',
       tags: ['TypeScript', 'PostgreSQL', 'Express'],
       github: '#',
       live: '#',
-      image: 'https://via.placeholder.com/400x250/764ba2/ffffff?text=Project+2',
+      image: '/project2.jpeg',
     },
     {
-      title: 'Project 3',
-      description: 'Your third fantastic project. Describe the problem it solves and your approach.',
+      title: 'AI Content Generator',
+      description: 'A powerful tool that uses AI to generate high-quality content for blogs and social media.',
       tags: ['JavaScript', 'MongoDB', 'CSS'],
       github: '#',
       live: '#',
-      image: 'https://via.placeholder.com/400x250/667eea/ffffff?text=Project+3',
+      image: '/project3.jpeg',
     },
+
   ];
 
   return (
