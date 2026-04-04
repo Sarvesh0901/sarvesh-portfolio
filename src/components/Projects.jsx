@@ -5,12 +5,12 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
-      title: 'Modern E-commerce',
-      description: 'A fully responsive e-commerce platform with real-time cart updates and secure checkout integration.',
-      tags: ['React', 'Node.js', 'MongoDB'],
-      github: '#',
-      live: '#',
-      image: '/project1.jpeg',
+      title: 'E-Shop E-commerce',
+      description: 'A feature-rich e-commerce platform with a modern UI, product filtering, and shopping cart functionality.',
+      tags: ['React', 'Firebase', 'CSS'],
+      github: 'https://github.com/Sarvesh0901/E-commerce-.git',
+      live: 'https://ecommercebysarvesh.vercel.app/',
+      image: '/project4.png',
     },
     {
       title: 'Social Media Dashboard',
@@ -28,7 +28,6 @@ const Projects = () => {
       live: '#',
       image: '/project3.jpeg',
     },
-
   ];
 
   return (
