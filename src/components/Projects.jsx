@@ -13,20 +13,20 @@ const Projects = () => {
       image: '/project4.png',
     },
     {
+      title: 'DevPulse AI',
+      description: 'Full-Stack GitHub Analytics & Repository Health Dashboard. Features a custom algorithm to score code quality and leverages Google Gemini 2.0 for automated AI commit summaries.',
+      tags: ['Next.js 15', 'Express', 'Supabase', 'Gemini AI'],
+      github: 'https://github.com/Sarvesh0901/devpulse-ui.git',
+      live: 'https://devpulse-ui.vercel.app/',
+      image: '/devpulse.png',
+    },
+    {
       title: 'See Your Weather',
       description: 'A dynamic weather application providing real-time forecasts, interactive maps, and detailed atmospheric data.',
       tags: ['React', 'OpenWeather API', 'CSS'],
       github: 'https://github.com/Sarvesh0901/Weather.git',
       live: 'https://seeyourweather.vercel.app/',
       image: '/weather-project.png',
-    },
-    {
-      title: 'AI Content Generator',
-      description: 'A powerful tool that uses AI to generate high-quality content for blogs and social media.',
-      tags: ['JavaScript', 'MongoDB', 'CSS'],
-      github: '#',
-      live: '#',
-      image: '/project3.jpeg',
     },
   ];
 
