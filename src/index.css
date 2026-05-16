@@ -1,49 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Color Palette */
-  --clr-primary: #7c3aed;
-  --clr-primary-light: #a78bfa;
-  --clr-secondary: #06b6d4;
-  --clr-accent: #f472b6;
-  --clr-gradient: linear-gradient(135deg, #7c3aed 0%, #2563eb 50%, #06b6d4 100%);
-  --clr-gradient-warm: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
+  /* === PRIMARY GRADIENT THEME — Warm Red → Pink → Purple === */
+  --clr-primary:        #c0392b;
+  --clr-primary-light:  #e74c3c;
+  --clr-secondary:      #9b59b6;
+  --clr-accent:         #e91e8c;
 
-  /* Background */
-  --clr-bg: #0f0f1a;
-  --clr-bg-2: #13131f;
-  --clr-bg-card: rgba(255, 255, 255, 0.04);
-  --clr-bg-glass: rgba(255, 255, 255, 0.06);
+  /* Gradients */
+  --clr-gradient:       linear-gradient(135deg, #c0392b 0%, #e91e8c 50%, #8e44ad 100%);
+  --clr-gradient-btn:   linear-gradient(135deg, #e74c3c 0%, #c0392b 40%, #9b59b6 100%);
+  --clr-gradient-text:  linear-gradient(135deg, #ff6b6b 0%, #e91e8c 50%, #a855f7 100%);
+  --clr-gradient-warm:  linear-gradient(135deg, #c0392b 0%, #e91e8c 100%);
 
-  /* Text */
-  --clr-text: #e2e8f0;
-  --clr-text-muted: #94a3b8;
-  --clr-text-heading: #f1f5f9;
-  --clr-text-dark: #1e293b;
+  /* === DARK BACKGROUNDS === */
+  --clr-bg:             #0e0b14;
+  --clr-bg-2:           #120d1a;
+  --clr-bg-card:        rgba(255, 255, 255, 0.04);
+  --clr-bg-glass:       rgba(255, 255, 255, 0.05);
 
-  /* Borders */
-  --clr-border: rgba(255, 255, 255, 0.08);
-  --clr-border-hover: rgba(124, 58, 237, 0.5);
+  /* === TEXT === */
+  --clr-text:           #e8dff0;
+  --clr-text-muted:     #9e8fb0;
+  --clr-text-heading:   #f5eeff;
 
-  /* Glass */
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  --glass-blur: blur(16px);
+  /* === BORDERS === */
+  --clr-border:         rgba(255, 255, 255, 0.07);
+  --clr-border-hover:   rgba(192, 57, 43, 0.5);
 
-  /* Spacing */
-  --section-padding: clamp(60px, 8vw, 120px) 5%;
-  --container-max: 1200px;
+  /* === GLASS EFFECT === */
+  --glass-bg:           rgba(255, 255, 255, 0.05);
+  --glass-border:       1px solid rgba(255, 255, 255, 0.09);
+  --glass-shadow:       0 8px 32px rgba(0, 0, 0, 0.5);
+  --glass-blur:         blur(16px);
 
-  /* Radius */
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
-  --radius-xl: 32px;
+  /* === LAYOUT === */
+  --section-padding:    clamp(60px, 8vw, 120px) 5%;
+  --container-max:      1200px;
 
-  /* Transitions */
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  /* === BORDER RADIUS === */
+  --radius-sm:    8px;
+  --radius-md:    16px;
+  --radius-lg:    24px;
+  --radius-xl:    32px;
+
+  /* === TRANSITIONS === */
+  --transition:       all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:  all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --- Reset --- */
@@ -115,7 +118,7 @@ button {
   font-weight: 800;
   text-align: center;
   margin-bottom: clamp(3rem, 6vw, 5rem);
-  background: linear-gradient(135deg, var(--clr-text-heading) 0%, var(--clr-primary-light) 100%);
+  background: var(--clr-gradient-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaDribbble, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -7,14 +7,14 @@ const Contact = () => {
     {
       name: 'GitHub',
       icon: FaGithub,
-      url: 'https://github.com/sarvesh843910',
-      color: '#6e6e80',
+      url: 'https://github.com/Sarvesh0901',
+      color: '#a78bfa',
     },
     {
-      name: 'Dribbble',
-      icon: FaDribbble,
-      url: 'https://dribbble.com/sarvesh843910',
-      color: '#EA4C89',
+      name: 'LinkedIn',
+      icon: FaLinkedin,
+      url: 'https://linkedin.com/in/sarvesh-patil-b7b8b5259',
+      color: '#0A66C2',
     },
     {
       name: 'Email',
@@ -27,7 +27,6 @@ const Contact = () => {
   return (
     <section className="contact" id="contact">
       <div className="container">
-        {/* Title sits as a normal block element above the grid */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,8 +37,6 @@ const Contact = () => {
           Get In Touch
         </motion.h2>
 
-
-        {/* Two-column grid: info left, form right */}
         <div className="contact-grid">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -50,10 +47,32 @@ const Contact = () => {
           >
             <h3>Let's work together</h3>
             <p>
-              I'm always open to discussing new projects, creative ideas, or 
-              opportunities to be part of your visions. Whether you have a 
+              I'm always open to discussing new projects, creative ideas, or
+              opportunities to be part of your visions. Whether you have a
               question or just want to say hi, feel free to reach out!
             </p>
+
+            {/* Direct contact info */}
+            <div className="contact-info">
+              <a href="mailto:sarvesh843910@gmail.com" className="contact-info-item">
+                <div className="contact-info-icon">
+                  <FaEnvelope size={18} />
+                </div>
+                <div className="contact-info-body">
+                  <span className="contact-info-label">Email</span>
+                  <span className="contact-info-value">sarvesh843910@gmail.com</span>
+                </div>
+              </a>
+              <a href="tel:+919876543210" className="contact-info-item">
+                <div className="contact-info-icon">
+                  <FaPhone size={18} />
+                </div>
+                <div className="contact-info-body">
+                  <span className="contact-info-label">Phone</span>
+                  <span className="contact-info-value">+91 98765 43210</span>
+                </div>
+              </a>
+            </div>
 
             <div className="social-links">
               {socialLinks.map((link, index) => (
@@ -68,8 +87,9 @@ const Contact = () => {
                   transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
                   className="social-link"
                   style={{ '--hover-color': link.color }}
+                  title={link.name}
                 >
-                  <link.icon size={22} />
+                  <link.icon size={20} />
                 </motion.a>
               ))}
             </div>

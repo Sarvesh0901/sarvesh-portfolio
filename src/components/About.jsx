@@ -1,21 +1,7 @@
 import { motion } from 'framer-motion';
-import { FaReact, FaNodeJs, FaDatabase, FaGitAlt } from 'react-icons/fa';
-import { SiMongodb, SiPostgresql, SiTypescript, SiJavascript, SiNextdotjs } from 'react-icons/si';
 import './About.css';
 
 const About = () => {
-  const skills = [
-    { name: 'Next.js', icon: SiNextdotjs, color: '#a78bfa' },
-    { name: 'React', icon: FaReact, color: '#61DAFB' },
-    { name: 'Node.js', icon: FaNodeJs, color: '#86efac' },
-    { name: 'TypeScript', icon: SiTypescript, color: '#60a5fa' },
-    { name: 'JavaScript', icon: SiJavascript, color: '#fde68a' },
-    { name: 'MongoDB', icon: SiMongodb, color: '#6ee7b7' },
-    { name: 'PostgreSQL', icon: SiPostgresql, color: '#93c5fd' },
-    { name: 'Database', icon: FaDatabase, color: '#fcd34d' },
-    { name: 'Git', icon: FaGitAlt, color: '#fca5a5' },
-  ];
-
   return (
     <section className="about" id="about">
       <div className="container">
@@ -30,58 +16,54 @@ const About = () => {
         </motion.h2>
 
         <div className="about-content">
+          {/* LEFT: Profile Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="about-text"
+            className="about-image"
           >
-            <h3>Let me introduce myself</h3>
-            <p>
-              I'm a passionate Full Stack Developer and Designer with a love for creating 
-              beautiful, functional, and user-friendly applications. With expertise 
-              in modern web technologies, I transform ideas into reality through 
-              clean, efficient code.
-            </p>
-            <p>
-              My journey in software development is driven by curiosity and a 
-              commitment to continuous learning. I believe in writing code that 
-              is not only functional but also maintainable and scalable.
-            </p>
-            <p>
-              When I'm not coding, you can find me exploring new technologies, 
-              designing creative solutions, or sharing knowledge with 
-              the developer community.
-            </p>
+            <div className="about-image-wrapper">
+              <img src="/AboutSarvesh.jpeg" alt="Sarvesh" className="about-profile-img" />
+            </div>
+            {/* Second image slot — replace src when ready */}
+            
           </motion.div>
 
+          {/* RIGHT: Text */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="skills-section"
+            className="about-text"
           >
-            <h3>My Tech Stack</h3>
-            <div className="skills-grid">
-              {skills.map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: index * 0.07 }}
-                  className="skill-card"
-                  whileHover={{ scale: 1.08, y: -4 }}
-                >
-                  <skill.icon 
-                    size={38} 
-                    style={{ color: skill.color }}
-                  />
-                  <span>{skill.name}</span>
-                </motion.div>
-              ))}
+            <h3>Let me introduce myself</h3>
+            <p>
+              I'm a <strong>Full Stack Developer</strong> based in Bengaluru, India,
+              currently working at <span className="highlight">Adeptek Solutions</span>.
+              I graduated with a B.Sc. in IT from Graphic Era University in 2025.
+            </p>
+            <p>
+              My core stack is <strong>Next.js + React + Firebase</strong>. I build
+              AI-powered products, e-commerce dashboards, and mobile apps with
+              React Native. I love integrating AI APIs (Gemini, Claude) into products.
+            </p>
+            <p>
+              I believe in clean, maintainable code and beautiful user experiences.
+              Always learning, always building.
+            </p>
+
+            <div className="about-highlights">
+              <div className="highlight-item">
+                <span className="highlight-icon">🎓</span>
+                <span>B.Sc. IT — Graphic Era University, 2025</span>
+              </div>
+              <div className="highlight-item">
+                <span className="highlight-icon">💼</span>
+                <span>Full Stack Dev @ Adeptek Solutions, Beng</span>
+              </div>
             </div>
           </motion.div>
         </div>

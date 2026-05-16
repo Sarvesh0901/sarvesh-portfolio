@@ -9,11 +9,11 @@
 }
 
 .navbar.scrolled {
-  background: rgba(15, 15, 26, 0.85);
+  background: rgba(14, 11, 20, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   padding: 1rem 5%;
 }
 
@@ -28,7 +28,7 @@
 .logo {
   font-size: 1.6rem;
   font-weight: 800;
-  background: var(--clr-gradient);
+  background: var(--clr-gradient-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -38,21 +38,19 @@
   letter-spacing: -0.5px;
 }
 
-.logo:hover {
-  opacity: 0.85;
-}
+.logo:hover { opacity: 0.85; }
 
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   align-items: center;
 }
 
 .nav-links a {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   transition: var(--transition);
   position: relative;
   white-space: nowrap;
@@ -70,19 +68,14 @@
   transition: width 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #fff;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
+.nav-links a:hover { color: #fff; }
+.nav-links a:hover::after { width: 100%; }
 
 /* Mobile Menu Button */
 .mobile-menu-btn {
   display: none;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: #ffffff;
   cursor: pointer;
   padding: 0.6rem;
@@ -92,7 +85,7 @@
 }
 
 .mobile-menu-btn:hover {
-  background: rgba(124, 58, 237, 0.25);
+  background: rgba(192, 57, 43, 0.2);
   border-color: var(--clr-primary);
 }
 
@@ -101,21 +94,19 @@
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.55);
   z-index: 999;
   backdrop-filter: blur(4px);
 }
 
-/* -------------------- TABLET (768px - 968px) -------------------- */
+/* -------------------- TABLET -------------------- */
 @media (max-width: 968px) {
   .mobile-menu-btn {
     display: flex;
     z-index: 1001;
   }
 
-  .menu-overlay.active {
-    display: block;
-  }
+  .menu-overlay.active { display: block; }
 
   .nav-links {
     position: fixed;
@@ -123,10 +114,10 @@
     right: 0;
     height: 100dvh;
     width: 280px;
-    background: rgba(15, 15, 26, 0.97);
+    background: rgba(14, 11, 20, 0.97);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
     flex-direction: column;
     justify-content: center;
     padding: 5rem 2.5rem 3rem;
@@ -135,10 +126,10 @@
     opacity: 0;
     visibility: hidden;
     transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-      opacity 0.3s ease,
-      visibility 0.35s ease;
+                opacity 0.3s ease,
+                visibility 0.35s ease;
     z-index: 1000;
-    box-shadow: -4px 0 40px rgba(0, 0, 0, 0.5);
+    box-shadow: -4px 0 40px rgba(0, 0, 0, 0.6);
   }
 
   .nav-links.active {
@@ -149,37 +140,24 @@
 
   .nav-links a {
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.8);
     padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     width: 100%;
   }
 
   .nav-links a:hover {
-    color: var(--clr-primary-light);
+    color: #e74c3c;
     padding-left: 8px;
   }
 
-  .nav-links a::after {
-    display: none;
-  }
+  .nav-links a::after { display: none; }
 }
 
-/* -------------------- MOBILE (480px and below) -------------------- */
+/* -------------------- MOBILE -------------------- */
 @media (max-width: 480px) {
-  .navbar {
-    padding: 1rem 4%;
-  }
-
-  .navbar.scrolled {
-    padding: 0.75rem 4%;
-  }
-
-  .logo {
-    font-size: 1.35rem;
-  }
-
-  .nav-links {
-    width: 75%;
-  }
+  .navbar { padding: 1rem 4%; }
+  .navbar.scrolled { padding: 0.75rem 4%; }
+  .logo { font-size: 1.35rem; }
+  .nav-links { width: 75%; }
 }
