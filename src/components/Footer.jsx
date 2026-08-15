@@ -39,9 +39,9 @@ const Footer = () => {
                 <FaEnvelope size={13} />
                 sarvesh843910@gmail.com
               </a>
-              <a href="tel:+919876543210" className="footer-contact-link">
+              <a href="tel:+918431644930" className="footer-contact-link">
                 <FaPhone size={13} />
-                +91 98765 43210
+                +91 84316 44930
               </a>
               <span className="footer-contact-link footer-location">
                 <FaMapMarkerAlt size={13} />
