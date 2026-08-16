@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   padding: 100px 5% 80px;
-  background: var(--clr-bg);
+  background: transparent;
   position: relative;
   overflow: hidden;
 }

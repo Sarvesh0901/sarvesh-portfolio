@@ -1,0 +1,162 @@
+/* Interactive Background Container */
+.interactive-bg-wrapper {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  background-color: #0e0b14;
+}
+
+/* Dynamic Interactive Mouse Spotlight */
+.bg-mouse-spotlight {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    650px circle at var(--mouse-x, 50vw) var(--mouse-y, 50vh),
+    rgba(233, 30, 140, 0.09) 0%,
+    rgba(192, 57, 43, 0.06) 35%,
+    rgba(155, 89, 182, 0.04) 60%,
+    transparent 80%
+  );
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  will-change: background;
+  z-index: 1;
+}
+
+/* Floating Ambient Glowing Gradient Orbs */
+.bg-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  opacity: 0.22;
+  will-change: transform;
+}
+
+.orb-1 {
+  width: 480px;
+  height: 480px;
+  top: -10%;
+  left: -8%;
+  background: radial-gradient(circle, #c0392b 0%, #e91e8c 60%, transparent 80%);
+  animation: orbDrift1 22s ease-in-out infinite alternate;
+}
+
+.orb-2 {
+  width: 520px;
+  height: 520px;
+  bottom: -15%;
+  right: -10%;
+  background: radial-gradient(circle, #8e44ad 0%, #e91e8c 60%, transparent 80%);
+  animation: orbDrift2 26s ease-in-out infinite alternate;
+}
+
+.orb-3 {
+  width: 380px;
+  height: 380px;
+  top: 45%;
+  left: 65%;
+  background: radial-gradient(circle, #e74c3c 0%, #9b59b6 70%, transparent 85%);
+  animation: orbDrift3 20s ease-in-out infinite alternate;
+}
+
+.orb-4 {
+  width: 340px;
+  height: 340px;
+  bottom: 30%;
+  left: 10%;
+  background: radial-gradient(circle, #e91e8c 0%, #c0392b 70%, transparent 85%);
+  animation: orbDrift4 24s ease-in-out infinite alternate;
+}
+
+/* Subtle Animated Grid / Dot Matrix */
+.bg-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Canvas for Particles & Constellations */
+.bg-particles-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Orb Keyframe Animations */
+@keyframes orbDrift1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(8vw, 12vh) scale(1.15);
+  }
+  100% {
+    transform: translate(-5vw, 6vh) scale(0.95);
+  }
+}
+
+@keyframes orbDrift2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-10vw, -14vh) scale(1.18);
+  }
+  100% {
+    transform: translate(6vw, -8vh) scale(0.92);
+  }
+}
+
+@keyframes orbDrift3 {
+  0% {
+    transform: translate(0, 0) scale(0.9);
+  }
+  50% {
+    transform: translate(-12vw, 10vh) scale(1.2);
+  }
+  100% {
+    transform: translate(8vw, -12vh) scale(1);
+  }
+}
+
+@keyframes orbDrift4 {
+  0% {
+    transform: translate(0, 0) scale(1.1);
+  }
+  50% {
+    transform: translate(14vw, -10vh) scale(0.85);
+  }
+  100% {
+    transform: translate(-8vw, 8vh) scale(1.05);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bg-glow-orb {
+    filter: blur(60px);
+    opacity: 0.18;
+  }
+
+  .orb-1, .orb-2 {
+    width: 320px;
+    height: 320px;
+  }
+
+  .orb-3, .orb-4 {
+    display: none;
+  }
+}

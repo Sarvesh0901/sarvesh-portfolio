@@ -1,6 +1,8 @@
 .about {
   padding: var(--section-padding);
-  background: var(--clr-bg-2);
+  background: rgba(18, 13, 26, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   position: relative;
   overflow: hidden;
 }

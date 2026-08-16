@@ -1,6 +1,8 @@
 .services {
   padding: var(--section-padding);
-  background: var(--clr-bg);
+  background: rgba(14, 11, 20, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   position: relative;
   overflow: hidden;
 }

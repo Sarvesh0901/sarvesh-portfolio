@@ -2,5 +2,11 @@
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  background: var(--clr-bg);
+  position: relative;
+}
+
+.app > section,
+.app > footer {
+  position: relative;
+  z-index: 1;
 }
