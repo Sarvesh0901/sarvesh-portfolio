@@ -7,7 +7,7 @@ const Footer = () => {
 
   const socialLinks = [
     { name: 'GitHub',   icon: FaGithub,   url: 'https://github.com/Sarvesh0901' },
-    { name: 'LinkedIn', icon: FaLinkedin, url: 'https://linkedin.com/in/sarvesh-patil-b7b8b5259' },
+    { name: 'LinkedIn', icon: FaLinkedin, url: 'https://www.linkedin.com/in/sarvesh-yadav-dev' },
     { name: 'Email',    icon: FaEnvelope, url: 'mailto:sarvesh843910@gmail.com' },
   ];
 

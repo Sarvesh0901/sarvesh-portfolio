@@ -46,7 +46,7 @@ const Contact = () => {
     {
       name: 'LinkedIn',
       icon: FaLinkedin,
-      url: 'https://linkedin.com/in/sarvesh-patil-b7b8b5259',
+      url: 'https://www.linkedin.com/in/sarvesh-yadav-dev',
       color: '#0A66C2',
     },
     {

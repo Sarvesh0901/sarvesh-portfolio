@@ -104,7 +104,7 @@ const Hero = () => {
             <a href="https://github.com/Sarvesh0901" target="_blank" rel="noopener noreferrer" className="hero-social-link" aria-label="GitHub">
               <FaGithub size={20} />
             </a>
-            <a href="https://linkedin.com/in/sarvesh-patil-b7b8b5259" target="_blank" rel="noopener noreferrer" className="hero-social-link" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/sarvesh-yadav-dev" target="_blank" rel="noopener noreferrer" className="hero-social-link" aria-label="LinkedIn">
               <FaLinkedin size={20} />
             </a>
             <a href="mailto:sarvesh843910@gmail.com" className="hero-social-link" aria-label="Email">
